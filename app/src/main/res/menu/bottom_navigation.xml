@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_bnv_home" android:title="홈" android:icon="@drawable/ic_action_home"/>
+    <item android:id="@+id/menu_bnv_location" android:title="지도" android:icon="@drawable/ic_action_location"/>
+    <item android:id="@+id/menu_bnv_person" android:title="MY" android:icon="@drawable/ic_action_person"/>
+    <item android:id="@+id/menu_bnv_poll" android:title="자료" android:icon="@drawable/ic_action_poll"/>
+    <item android:id="@+id/menu_bnv_scarch" android:title="검색" android:icon="@drawable/ic_action_search"/>
+
+</menu>

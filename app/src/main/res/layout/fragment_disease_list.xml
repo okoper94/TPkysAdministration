@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:menu="@menu/fragment_toolbar_menu">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_search"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:hint="검색">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="290dp"
+                android:layout_height="45dp"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_below="@id/toolbar"
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_below="@id/view"
+        android:id="@+id/card_view_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="4dp"
+        app:contentPadding="16dp"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/tv_place_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="발생지역 : "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="행동요령:"
+            android:layout_marginTop="50dp"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="질병증상:"
+            android:layout_marginTop="100dp"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="발생거리: "
+            android:textColor="@color/design_default_color_primary"
+            android:textStyle="bold"
+            android:padding="4dp"
+            android:layout_marginLeft="250dp"
+            android:layout_alignParentRight="true"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+</RelativeLayout>
