@@ -112,7 +112,7 @@
             android:layout_below="@id/tv_service">
 
             <androidx.cardview.widget.CardView
-                android:id="@id/card_view_area"
+                android:id="@+id/card_view_area"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:layout_marginLeft="20dp"
