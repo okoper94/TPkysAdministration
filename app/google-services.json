@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "330995574774",
+    "project_id": "tpkysadministration",
+    "storage_bucket": "tpkysadministration.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330995574774:android:216cf0f9c8819b54b389d7",
+        "android_client_info": {
+          "package_name": "com.kys2024.tpkysadministration"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf6Q9xNeBHSLySzURzuqsuM1fvzGyZ7-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

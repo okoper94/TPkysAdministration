@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.kys2024.tpkysadministration.databinding.FragmentDiseaseMapBinding
+import com.kys2024.tpkysadministration.databinding.FragmentDiseaseSearchBinding
 
-class DiseaseMapFragment :Fragment(){
+class DiseaseSearchFragment:Fragment(){
 
-    private val binding:FragmentDiseaseMapBinding by lazy { FragmentDiseaseMapBinding.inflate(layoutInflater) }
+    private val binding: FragmentDiseaseSearchBinding by lazy { FragmentDiseaseSearchBinding.inflate(layoutInflater) }
 
     override fun onCreateView( //뷰가 만들기만 하는곳
         inflater: LayoutInflater,
@@ -28,6 +28,5 @@ class DiseaseMapFragment :Fragment(){
 
 
     }
-
 
 }
