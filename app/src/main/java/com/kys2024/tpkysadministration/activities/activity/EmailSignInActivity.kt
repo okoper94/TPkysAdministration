@@ -44,6 +44,7 @@ class EmailSignInActivity : AppCompatActivity() {
 
                     startActivity(intent)
 
+
                 }else{
                     AlertDialog.Builder(this).setMessage("이메일과 비밀번호를 다시 확인해주세요.").create().show()
                     binding.inputLayoutEmail.editText!!.requestFocus()
