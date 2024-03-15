@@ -4,15 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.kys2024.tpkysadministration.activities.activity.MainActivity
 import com.kys2024.tpkysadministration.activities.adapter.RecyclerAdapter
 import com.kys2024.tpkysadministration.databinding.FragmentDiseaseListBinding
 
-class DiseaseListFragment:Fragment() {
+class DiseaseListFragment : Fragment() {
 
-    private val binding:FragmentDiseaseListBinding by lazy { FragmentDiseaseListBinding.inflate(layoutInflater) }
+    private val binding: FragmentDiseaseListBinding by lazy {
+        FragmentDiseaseListBinding.inflate(
+            layoutInflater
+        )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,11 +30,21 @@ class DiseaseListFragment:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val ma:MainActivity = activity as MainActivity
-        ma.searchResponse?: return
+        val ma: MainActivity = activity as MainActivity
+        ma.searchResponse ?: return
 
-        binding.recyclerView.adapter=RecyclerAdapter(requireContext(),ma.searchResponse!!.documents)
+//        binding.recyclerView.adapter= RecyclerAdapter(requireContext(),this)
 
+
+        binding.recyclerView.adapter =
+            RecyclerAdapter(requireContext(), ma.searchResponse!!.response.body.items)
+
+
+//        ma.searchResponse?.All?.apply {
+//            binding.recyclerView.adapter= RecyclerAdapter(requireContext(), this)
+//            binding.recyclerView.adapter=RecyclerAdapter(requireContext(), ma.searchResponse!!.)
+//
+//        }
 
 
     }
@@ -40,7 +53,6 @@ class DiseaseListFragment:Fragment() {
         super.onResume()
 
     }
-
 
 
 }

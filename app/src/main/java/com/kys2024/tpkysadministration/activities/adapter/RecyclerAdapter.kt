@@ -1,18 +1,20 @@
 package com.kys2024.tpkysadministration.activities.adapter
 
-import android.app.LauncherActivity.ListItem
 import android.content.Context
-import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.google.gson.Gson
 import com.kys2024.tpkysadministration.activities.data.Item
-import com.kys2024.tpkysadministration.activities.data.Place
+import com.kys2024.tpkysadministration.activities.data.Responce
+import com.kys2024.tpkysadministration.activities.fragments.DiseaseListFragment
 import com.kys2024.tpkysadministration.databinding.RecyclerItemListFragmentBinding
+import retrofit2.Response
+import kotlin.math.log
 
-class RecyclerAdapter (val context: Context,val documents:List<Item>):Adapter<RecyclerAdapter.VH>() {
+class RecyclerAdapter(val context: Context, var item: List<Item>):Adapter<RecyclerAdapter.VH>() {
 
     inner class VH(val binding: RecyclerItemListFragmentBinding):ViewHolder(binding.root)
 
@@ -23,18 +25,20 @@ class RecyclerAdapter (val context: Context,val documents:List<Item>):Adapter<Re
     }
 
     override fun getItemCount(): Int {
-        return documents.size
+        return item.size
     }
 
     override fun onBindViewHolder(holder: VH, position: Int) {
-        val item: Item =documents[position]
-        holder.binding.tvCnt.text= item.cnt.toString()
-        holder.binding.tvDisscd.text= item.dissCd
-        holder.binding.tvRisk.text= item.risk.toString()
-        holder.binding.tvIowrnkzncd.text= item.lowrnkZnCd
-        holder.binding.tvZncd.text= item.znCd
-        holder.binding.tvIowrnkzncd.text= item.znCd
-        holder.binding.tvDt.text= item.znCd
+        val items= item[position]
+
+        holder.binding.tvCnt.text= items.cnt.toString()
+        holder.binding.tvDisscd.text= items.dissCd
+        holder.binding.tvRisk.text= items.risk.toString()
+        holder.binding.tvIowrnkzncd.text= items.lowrnkZnCd
+        holder.binding.tvZncd.text= items.znCd
+        holder.binding.tvIowrnkzncd.text= items.znCd
+        holder.binding.tvDt.text= items.znCd
+        Log.d("aa", items.dissCd+"aaa")
 
 
 

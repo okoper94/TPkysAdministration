@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activities.activity.LastActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.activity.BoardActivity"
             android:exported="false" />
         <activity
@@ -28,13 +31,7 @@
             android:name=".activities.activity.MembershipActivity"
             android:exported="false" />
         <activity
-            android:name=".MembershipActivity"
-            android:exported="false" />
-        <activity
             android:name=".activities.activity.Signin_MembershipActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.activity.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".activities.activity.IntroActivity"
