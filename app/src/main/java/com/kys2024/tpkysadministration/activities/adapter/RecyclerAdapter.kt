@@ -36,9 +36,11 @@ class RecyclerAdapter(val context: Context, var item: List<Item>):Adapter<Recycl
         holder.binding.tvRisk.text= items.risk.toString()
         holder.binding.tvIowrnkzncd.text= items.lowrnkZnCd
         holder.binding.tvZncd.text= items.znCd
-        holder.binding.tvIowrnkzncd.text= items.znCd
-        holder.binding.tvDt.text= items.znCd
+        holder.binding.tvDt.text= items.dt
+        holder.binding.tvDissriskxpln.text= items.dissRiskXpln
         Log.d("aa", items.dissCd+"aaa")
+
+
 
 
 

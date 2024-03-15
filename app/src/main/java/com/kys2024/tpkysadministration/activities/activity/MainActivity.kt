@@ -78,6 +78,22 @@ class MainActivity : AppCompatActivity() {
         binding.cardViewBehavior.setOnClickListener { clickBehanior() }
         binding.cardViewData.setOnClickListener { clickData() }
 
+//        binding.se.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.busan.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.degu.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.inchun.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.gwangJu.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.deJun.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.wulsan.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.gwuhgGi.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.gwanhWon.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.choongBook.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.choongNam.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.junBook.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.junNam.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.gungNam.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.gungBook.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
+//        binding.jeJu.setOnClickListener { startActivity(Intent(Intent(this,LastActivity::class.java))) }
 
 
 

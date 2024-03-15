@@ -14,47 +14,47 @@
             android:id="@+id/tv"
             android:layout_width="match_parent"
             android:layout_height="15dp"
-            android:background="#5CE8FA"/>
+            android:background="#5CE8FA" />
 
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:navigationIcon="@drawable/ic_action_menu"
+            android:layout_below="@id/tv"
             app:menu="@menu/toolbar_menu"
-            android:layout_below="@id/tv">
+            app:navigationIcon="@drawable/ic_action_menu">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/medical"
                 android:layout_marginLeft="45dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:src="@drawable/medical" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="질병예측"
                 android:textSize="30sp"
-                android:textStyle="bold"
-                android:layout_gravity="center"/>
+                android:textStyle="bold" />
 
         </androidx.appcompat.widget.Toolbar>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_layout_main"
-            android:paddingRight="8dp"
-            android:paddingLeft="8dp"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_below="@id/toolbar"
-            android:hint="찾으시는 서비스를 입력하세요">
+            android:hint="찾으시는 서비스를 입력하세요"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,53 +63,53 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_below="@id/input_layout_main"
-            android:src="@drawable/christmas"
-            android:layout_marginRight="8dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
             android:scaleType="centerCrop"
-            android:layout_marginTop="4dp"/>
+            android:src="@drawable/christmas" />
 
-<!--        <androidx.viewpager2.widget.ViewPager2-->
-<!--            android:id="@+id/pager"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="150dp"-->
-<!--            android:background="@color/black"-->
-<!--            android:layout_marginRight="8dp"-->
-<!--            android:layout_marginLeft="8dp"-->
-<!--            android:layout_marginTop="4dp"-->
-<!--            android:layout_below="@+id/input_layout_main"/>-->
+        <!--        <androidx.viewpager2.widget.ViewPager2-->
+        <!--            android:id="@+id/pager"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="150dp"-->
+        <!--            android:background="@color/black"-->
+        <!--            android:layout_marginRight="8dp"-->
+        <!--            android:layout_marginLeft="8dp"-->
+        <!--            android:layout_marginTop="4dp"-->
+        <!--            android:layout_below="@+id/input_layout_main"/>-->
 
-<!--        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator-->
-<!--            android:id="@+id/dots_indicator"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="120dp"-->
-<!--            android:layout_marginBottom="10dp"-->
-<!--            android:layout_marginTop="8dp"-->
-<!--            app:dotsColor="#717070"-->
-<!--            app:dotsStrokeColor="#717070"-->
-<!--            tools:ignore="MissingClass"-->
-<!--            android:layout_alignBottom="@+id/pager"/>-->
+        <!--        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator-->
+        <!--            android:id="@+id/dots_indicator"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="120dp"-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            app:dotsColor="#717070"-->
+        <!--            app:dotsStrokeColor="#717070"-->
+        <!--            tools:ignore="MissingClass"-->
+        <!--            android:layout_alignBottom="@+id/pager"/>-->
 
         <TextView
             android:id="@+id/tv_service"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="자주찾는 서비스"
             android:layout_below="@id/iv_main"
-            android:textStyle="bold"
-            android:layout_marginTop="4dp"
             android:layout_marginLeft="20dp"
-            android:textSize="17sp"/>
+            android:layout_marginTop="4dp"
+            android:text="자주찾는 서비스"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
         <GridLayout
             android:id="@+id/linear_layout"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:columnCount="4"
-            android:rowCount="2"
+            android:layout_below="@id/tv_service"
             android:layout_marginTop="4dp"
-            android:layout_below="@id/tv_service">
+            android:columnCount="4"
+            android:rowCount="2">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view_area"
@@ -122,7 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/doctor"/>
+                    android:src="@drawable/doctor" />
 
             </androidx.cardview.widget.CardView>
 
@@ -130,14 +130,14 @@
                 android:id="@+id/card_view_board"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
-                app:cardCornerRadius="20dp"
-                android:layout_marginLeft="8dp">
+                android:layout_marginLeft="8dp"
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/docto"/>
+                    android:src="@drawable/docto" />
 
             </androidx.cardview.widget.CardView>
 
@@ -145,14 +145,14 @@
                 android:id="@+id/card_view_behavior"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
-                app:cardCornerRadius="20dp"
-                android:layout_marginLeft="8dp">
+                android:layout_marginLeft="8dp"
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/rescue"/>
+                    android:src="@drawable/rescue" />
 
             </androidx.cardview.widget.CardView>
 
@@ -160,124 +160,244 @@
                 android:id="@+id/card_view_data"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
-                app:cardCornerRadius="20dp"
-                android:layout_marginLeft="8dp">
+                android:layout_marginLeft="8dp"
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/growth"/>
+                    android:src="@drawable/growth" />
 
             </androidx.cardview.widget.CardView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="발생지역"
-                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
-                android:layout_gravity="center"
-                android:textSize="17sp"/>
+                android:text="발생지역"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
                 android:text="게시판"
-                android:textStyle="bold"
-                android:layout_marginLeft="8dp"
-                android:layout_gravity="center"
-                android:textSize="17sp"/>
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
                 android:text="행동요령"
-                android:textStyle="bold"
-                android:layout_marginLeft="8dp"
-                android:layout_gravity="center"
-                android:textSize="17sp"/>
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="질병자료"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"
                 android:layout_gravity="center"
-                android:textSize="17sp"/>
-
-
+                android:layout_marginRight="10dp"
+                android:text="질병자료"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
 
         </GridLayout>
 
         <TextView
-            android:text="검색자료"
             android:id="@+id/tv_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/linear_layout"
-            android:textStyle="bold"
             android:layout_marginLeft="20dp"
-            android:textSize="17sp"/>
+            android:text="검색자료"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_below="@id/tv_search">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
 
 
-        <FrameLayout
-            android:id="@+id/container_fragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_below="@id/tv_search"
-            android:layout_marginTop="8dp">
+<!--                <Button-->
+<!--                    android:id="@+id/se"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/tv_search"-->
+<!--                    android:text="서울" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/busan"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/tv_search"-->
+<!--                    android:layout_toRightOf="@id/se"-->
+<!--                    android:text="부산" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/degu"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/tv_search"-->
+<!--                    android:layout_toRightOf="@id/busan"-->
+<!--                    android:text="대구" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/inchun"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/tv_search"-->
+<!--                    android:layout_toRightOf="@id/degu"-->
+<!--                    android:text="인천" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/gwangJu"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/inchun"-->
+<!--                    android:text="광주" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/deJun"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/inchun"-->
+<!--                    android:layout_toRightOf="@id/se"-->
+<!--                    android:text="대전" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/wulsan"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/inchun"-->
+<!--                    android:layout_toRightOf="@id/deJun"-->
+<!--                    android:text="울산" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/gwuhgGi"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/inchun"-->
+<!--                    android:layout_toRightOf="@id/wulsan"-->
+<!--                    android:text="경기" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/gwanhWon"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/wulsan"-->
+<!--                    android:text="강원" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/chungBook"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/wulsan"-->
+<!--                    android:layout_toRightOf="@id/gwanhWon"-->
+<!--                    android:text="충북" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/choongNam"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/wulsan"-->
+<!--                    android:layout_toRightOf="@id/chungBook"-->
+<!--                    android:text="충남" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/choongBook"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/wulsan"-->
+<!--                    android:layout_toRightOf="@id/choongNam"-->
+<!--                    android:text="충북" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/junNam"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/choongNam"-->
+<!--                    android:text="전남" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/junBook"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/choongNam"-->
+<!--                    android:layout_toRightOf="@id/junNam"-->
+<!--                    android:text="전북" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/gungBook"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/junNam"-->
+<!--                    android:layout_toRightOf="@id/junBook"-->
+<!--                    android:text="경북" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/gungNam"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/junNam"-->
+<!--                    android:layout_toRightOf="@id/gungBook"-->
+<!--                    android:text="경남" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/jeJu"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/gungNam"-->
+<!--                    android:text="제주" />-->
+<!--            </RelativeLayout>-->
+
+<!--        </ScrollView>-->
+
+                <FrameLayout
+                    android:id="@+id/container_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_below="@id/tv_search"
+                    android:layout_marginTop="8dp">
 
 
-        </FrameLayout>
-
-
-
-
-
+                </FrameLayout>
 
 
     </RelativeLayout>
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottom"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
         android:backgroundTint="#5CE8FA">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
+            style="@style/Widget.MaterialComponents.BottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.BottomNavigationView"
-            android:background="#5CE8FA"
             android:layout_marginRight="16dp"
-            app:menu="@menu/bottom_navigation"/>
-
+            android:background="#5CE8FA"
+            app:menu="@menu/bottom_navigation" />
 
 
     </com.google.android.material.bottomappbar.BottomAppBar>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

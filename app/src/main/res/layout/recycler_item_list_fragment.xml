@@ -4,85 +4,89 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:ignore="MissingConstraints"
-    android:padding="8dp"
+    android:layout_margin="8dp"
     >
 
-
-
-
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_view_list"
+    <RelativeLayout
+        android:id="@+id/relative_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        tools:ignore="MissingConstraints"
         android:padding="8dp">
 
-        <TextView
-            android:id="@+id/tv_zncd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="발생지역 : "
-            android:padding="4dp"
-            android:layout_marginTop="40dp" />
+
+            <TextView
+                android:id="@+id/tv_zncd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="발생지역 : "
+                android:padding="4dp"
+                android:layout_below="@id/tv_dt" />
 
 
 
-        <TextView
-            android:id="@+id/tv_disscd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="질병명:"
-            android:layout_marginTop="0dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:padding="4dp"/>
+            <TextView
+                android:id="@+id/tv_disscd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="질병명:"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="4dp"/>
 
-        <TextView
-            android:id="@+id/tv_dt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="예측일자:"
-            android:layout_marginTop="20dp"
-            android:padding="4dp"/>
+            <TextView
+                android:id="@+id/tv_dt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예측일자:"
+                android:padding="4dp"
+                android:layout_below="@id/tv_disscd"
+                />
 
-        <TextView
-            android:id="@+id/tv_iowrnkzncd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="상세주소:"
-            android:layout_marginTop="60dp"
-            android:padding="4dp"/>
-        <TextView
-            android:id="@+id/tv_cnt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="예측질병건수:"
-            android:layout_marginTop="80dp"
-            android:padding="4dp"/>
+            <TextView
+                android:id="@+id/tv_iowrnkzncd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상세주소:"
+                android:layout_below="@id/tv_zncd"
+                android:padding="4dp"/>
+            <TextView
+                android:id="@+id/tv_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예측질병건수:"
+                android:layout_below="@id/tv_iowrnkzncd"
+                android:padding="4dp"/>
 
 
 
-        <TextView
-            android:id="@+id/tv_dissriskxpln"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="행동요령:"
-            android:layout_marginTop="100dp"
-            android:padding="4dp"/>
+            <TextView
+                android:id="@+id/tv_dissriskxpln"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="행동요령:"
+                android:layout_below="@id/tv_cnt"
+                android:layout_marginBottom="100dp"
+                android:padding="4dp"/>
 
-        <TextView
-            android:id="@+id/tv_risk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="질병위험도: "
-            android:textColor="@color/design_default_color_primary"
-            android:textStyle="bold"
-            android:padding="4dp"
-            android:layout_marginLeft="250dp"
-            android:layout_alignParentRight="true"/>
+            <TextView
+                android:id="@+id/tv_risk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="질병위험도: "
+                android:textColor="@color/design_default_color_primary"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:layout_marginLeft="150dp"
+                android:layout_alignParentRight="true"/>
 
-    </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
 
 </com.google.android.material.card.MaterialCardView>
