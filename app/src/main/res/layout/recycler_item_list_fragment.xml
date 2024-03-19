@@ -65,7 +65,6 @@
                 android:layout_height="wrap_content"
                 android:text="행동요령:"
                 android:layout_below="@id/tv_cnt"
-                android:layout_marginBottom="100dp"
                 android:padding="4dp"/>
 
             <TextView
