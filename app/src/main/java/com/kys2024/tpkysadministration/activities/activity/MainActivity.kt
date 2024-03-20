@@ -3,10 +3,13 @@ package com.kys2024.tpkysadministration.activities.activity
 
 import android.animation.ObjectAnimator
 import android.content.Intent
+import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.FragmentManager
+import com.google.protobuf.DescriptorProtos
 import com.kys2024.tpkysadministration.R
 import com.kys2024.tpkysadministration.activities.adapter.RecyclerAdapter
 import com.kys2024.tpkysadministration.activities.data.All
@@ -35,6 +38,8 @@ import kotlin.concurrent.thread
 class MainActivity : AppCompatActivity() {
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    var myLocation: Location?=null
+
 
     var searchResponse:All?=null
     var q:String="1"
@@ -45,6 +50,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
 
         supportFragmentManager.beginTransaction().add(R.id.container_fragment, DiseaseListFragment()).commit()
 
@@ -101,7 +107,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun clickArea() { //발생지역
-
+        startActivity(Intent(this,DetailMainActivity::class.java))
 
     }
 
