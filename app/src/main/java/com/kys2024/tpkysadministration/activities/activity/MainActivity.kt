@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun clcikBoard() { //게시판
-        startActivity(Intent(this, BoardActivity::class.java))
+        startActivity(Intent(this, LastActivity::class.java))
 
     }
 
