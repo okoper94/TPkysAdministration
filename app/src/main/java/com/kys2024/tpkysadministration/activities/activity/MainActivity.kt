@@ -54,12 +54,12 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().add(R.id.container_fragment, DiseaseListFragment()).commit()
 
+        binding.toolbar.setNavigationOnClickListener { clicknavig() }
+
         binding.toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.menu_login -> startActivity(Intent(this, Signin_MembershipActivity::class.java))
-                R.id.menu_bnv_poll-> supportFragmentManager.beginTransaction().replace(R.id.container_fragment,DiseaseListFragment()).commit()
-                R.id.menu_my_page -> startActivity(Intent(this, MyPageActivity::class.java))
-                //R.id.menu_sign_out->  로그아웃 아직 않함
+                R.id.menu_sign_out-> Toast.makeText(this, "로그아웃 예정", Toast.LENGTH_SHORT).show()
             }
             true
         }
@@ -104,6 +104,9 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+    private fun clicknavig(){//툴바 네비게이션 목록 삼디다스
+        Toast.makeText(this, "목록 들어갈 예정", Toast.LENGTH_SHORT).show()
+    }
 
 
     private fun clickArea() { //발생지역
@@ -118,9 +121,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun clickBehanior() { //행동요령
 
+        startActivity(Intent(this,MyPageActivity::class.java))
+
     }
 
     private fun clickData() { //질병자료
+        Toast.makeText(this, "질병자료 업데이트 예정", Toast.LENGTH_SHORT).show()
 
     }
 

@@ -13,10 +13,9 @@ class UpdateDeleteActivity : AppCompatActivity() {
     private val binding by lazy { ActivityUpdateDeleteBinding.inflate(layoutInflater) }
 
 
-//    var email = intent.getStringExtra("email")
-//    val password = intent.getStringExtra("password")
 
-//    private val passwordEditable:Editable=Editable.Factory.getInstance().newEditable(password)
+
+
 
 
 
@@ -24,15 +23,16 @@ class UpdateDeleteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        //인텐트 작업은 onCreate 부터 가능하다
 
         var email = intent.getStringExtra("email")
+        val password = intent.getStringExtra("password")
+
         val emailEditable:Editable=Editable.Factory.getInstance().newEditable(email)
-
-
-
+        val passwordEditable:Editable=Editable.Factory.getInstance().newEditable(password)
 
         binding.inputLayoutEmail.editText!!.text=emailEditable
-//        binding.inputLayoutPassword.editText!!.text=passwordEditable
+        binding.inputLayoutPassword.editText!!.text=passwordEditable
 
         binding.bntUpdate.setOnClickListener { clickUpdate() }
         binding.bntDelete.setOnClickListener { clickDelete() }

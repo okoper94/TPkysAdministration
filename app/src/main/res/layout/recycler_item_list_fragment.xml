@@ -42,19 +42,19 @@
                 android:layout_below="@id/tv_disscd"
                 />
 
-            <TextView
-                android:id="@+id/tv_iowrnkzncd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="상세주소:"
-                android:layout_below="@id/tv_zncd"
-                android:padding="4dp"/>
+<!--            <TextView-->
+<!--                android:id="@+id/tv_iowrnkzncd"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="상세주소:"-->
+<!--                android:layout_below="@id/tv_zncd"-->
+<!--                android:padding="4dp"/>-->
             <TextView
                 android:id="@+id/tv_cnt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="예측질병건수:"
-                android:layout_below="@id/tv_iowrnkzncd"
+                android:layout_below="@id/tv_zncd"
                 android:padding="4dp"/>
 
 
@@ -76,7 +76,7 @@
                 android:textStyle="bold"
                 android:padding="4dp"
                 android:layout_marginLeft="150dp"
-                android:layout_alignParentRight="true"/>
+                android:layout_alignParentRight="true" />
 
 
 

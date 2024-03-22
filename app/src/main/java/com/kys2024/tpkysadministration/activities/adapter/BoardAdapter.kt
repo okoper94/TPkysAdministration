@@ -38,7 +38,7 @@ class BoardAdapter(var context: Context, var boarditem: MutableList<BoardItem>):
 
         holder.binding.root.setOnClickListener {
 
-            AlertDialog.Builder(context).setMessage(items.email).create().show()
+            //AlertDialog.Builder(context).setMessage(items.email).create().show()
 
 
 

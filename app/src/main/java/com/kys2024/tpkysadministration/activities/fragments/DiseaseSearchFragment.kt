@@ -22,6 +22,8 @@ class DiseaseSearchFragment:Fragment(){
         return binding.root
 
 
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) { //뷰가 만들어지고 난후의 작업

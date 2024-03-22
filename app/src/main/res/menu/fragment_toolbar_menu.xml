@@ -2,6 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/menu_login" android:title="로그인" android:icon="@drawable/ic_action_search" app:showAsAction="always"/>
+    <item android:id="@+id/menu_login2" android:title="검색" android:icon="@drawable/ic_action_search" app:showAsAction="always"/>
 
 </menu>

@@ -3,10 +3,13 @@ package com.kys2024.tpkysadministration.activities.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.lifecycle.ReportFragment.Companion.reportFragment
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.kys2024.tpkysadministration.R
 import com.kys2024.tpkysadministration.activities.adapter.BoardAdapter
 import com.kys2024.tpkysadministration.activities.data.BoardItem
 import com.kys2024.tpkysadministration.databinding.ActivityLastBinding
@@ -23,6 +26,19 @@ class LastActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLastBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.toolbar.setNavigationOnClickListener { clickBack() }
+
+
+        binding.toolbar.setOnMenuItemClickListener {
+            when (it.itemId) {
+
+                R.id.menu_login2-> Toast.makeText(this, "검색 예정", Toast.LENGTH_SHORT).show()
+            }
+            true
+        }
+
+
 
         binding.floating.setOnClickListener { clickPost() }
 
@@ -50,6 +66,12 @@ class LastActivity : AppCompatActivity() {
 
 
     }
+    private fun clickBack(){
+        startActivity(Intent(this,MainActivity::class.java))
+
+    }
+
+
 
 
     private fun clickPost(){

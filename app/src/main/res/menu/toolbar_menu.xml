@@ -4,7 +4,7 @@
 
     <item android:id="@+id/menu_login" android:title="로그인" android:icon="@drawable/ic_action_person" />
     <item android:id="@+id/menu_sign_out" android:title="로그아웃" android:icon="@drawable/ic_action_person" />
-    <item android:id="@+id/menu_my_page" android:title="My page" android:icon="@drawable/ic_action_person" />
+
 
 
 
