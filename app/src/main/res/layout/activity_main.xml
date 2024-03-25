@@ -220,149 +220,56 @@
             android:textSize="17sp"
             android:textStyle="bold" />
 
-<!--        <ScrollView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_below="@id/tv_search">-->
+        <LinearLayout
+            android:id="@+id/linear_layout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/tv_search">
 
-<!--            <RelativeLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent">-->
+            <Button
+                android:id="@+id/btn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="감 기"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:backgroundTint="#424040"
+                android:layout_marginLeft="8dp"/>
+            <Button
+                android:id="@+id/btn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="식중독"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:backgroundTint="#424040"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"/>
+            <Button
+                android:id="@+id/btn_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="눈 병"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:backgroundTint="#424040"
+                android:layout_marginRight="4dp"/>
+            <Button
+                android:id="@+id/btn_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="피부병"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:backgroundTint="#424040"
+                android:layout_marginRight="8dp"/>
+
+        </LinearLayout>
 
 
-<!--                <Button-->
-<!--                    android:id="@+id/se"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/tv_search"-->
-<!--                    android:text="서울" />-->
 
-<!--                <Button-->
-<!--                    android:id="@+id/busan"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/tv_search"-->
-<!--                    android:layout_toRightOf="@id/se"-->
-<!--                    android:text="부산" />-->
 
-<!--                <Button-->
-<!--                    android:id="@+id/degu"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/tv_search"-->
-<!--                    android:layout_toRightOf="@id/busan"-->
-<!--                    android:text="대구" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/inchun"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/tv_search"-->
-<!--                    android:layout_toRightOf="@id/degu"-->
-<!--                    android:text="인천" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/gwangJu"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/inchun"-->
-<!--                    android:text="광주" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/deJun"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/inchun"-->
-<!--                    android:layout_toRightOf="@id/se"-->
-<!--                    android:text="대전" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/wulsan"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/inchun"-->
-<!--                    android:layout_toRightOf="@id/deJun"-->
-<!--                    android:text="울산" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/gwuhgGi"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/inchun"-->
-<!--                    android:layout_toRightOf="@id/wulsan"-->
-<!--                    android:text="경기" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/gwanhWon"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/wulsan"-->
-<!--                    android:text="강원" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/chungBook"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/wulsan"-->
-<!--                    android:layout_toRightOf="@id/gwanhWon"-->
-<!--                    android:text="충북" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/choongNam"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/wulsan"-->
-<!--                    android:layout_toRightOf="@id/chungBook"-->
-<!--                    android:text="충남" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/choongBook"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/wulsan"-->
-<!--                    android:layout_toRightOf="@id/choongNam"-->
-<!--                    android:text="충북" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/junNam"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/choongNam"-->
-<!--                    android:text="전남" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/junBook"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/choongNam"-->
-<!--                    android:layout_toRightOf="@id/junNam"-->
-<!--                    android:text="전북" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/gungBook"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/junNam"-->
-<!--                    android:layout_toRightOf="@id/junBook"-->
-<!--                    android:text="경북" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/gungNam"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/junNam"-->
-<!--                    android:layout_toRightOf="@id/gungBook"-->
-<!--                    android:text="경남" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/jeJu"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/gungNam"-->
-<!--                    android:text="제주" />-->
-<!--            </RelativeLayout>-->
-
-<!--        </ScrollView>-->
 
                 <FrameLayout
                     android:id="@+id/container_fragment"
@@ -370,7 +277,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:layout_below="@id/tv_search"
+                    android:layout_below="@id/linear_layout4"
                     android:layout_marginTop="8dp">
 
 

@@ -79,6 +79,11 @@ class MainActivity : AppCompatActivity() {
                true
         }//bottomNavigation
 
+        binding.btn1.setOnClickListener { clickBtn1() }
+        binding.btn2.setOnClickListener { clickBtn2() }
+        binding.btn3.setOnClickListener { clickBtn3() }
+        binding.btn4.setOnClickListener { clickBtn4() }
+
         binding.cardViewBoard.setOnClickListener { clcikBoard() }
         binding.cardViewArea.setOnClickListener { clickArea() }
         binding.cardViewBehavior.setOnClickListener { clickBehanior() }
@@ -149,7 +154,7 @@ class MainActivity : AppCompatActivity() {
 
         val retrofit=RetrofitHelper.getRetrofitInstance("https://apis.data.go.kr")
         val retrofitService=retrofit.create(RetrofitService::class.java)
-        var call=retrofitService.getDissItem("CJgLKiwoNZUqrSamb6vD/pCPGWJykavSx1D14h7VW1yzF8tj4RtJH/rOWlVAknPZbBtl6REk8QZZGVGvQP+oCw==","10",q,"json","1","11")
+        var call=retrofitService.getDissItem("CJgLKiwoNZUqrSamb6vD/pCPGWJykavSx1D14h7VW1yzF8tj4RtJH/rOWlVAknPZbBtl6REk8QZZGVGvQP+oCw==","10","1","json",q,"11")
         call.enqueue(object :Callback<All>{
             override fun onResponse(call: Call<All>, response: Response<All>) {
 //                val ss =response.body()
@@ -170,4 +175,22 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+    private fun clickBtn1(){ //감기 -- 1
+        q="1"
+        retrofit()
+    }
+    private fun clickBtn2(){ //식중독 --3
+        q="3"
+        retrofit()
+    }
+    private fun clickBtn3(){ //눈병 --2
+        q="2"
+        retrofit()
+    }
+    private fun clickBtn4(){ //피부병 --5
+        q="5"
+        retrofit()
+    }
+
 }
+

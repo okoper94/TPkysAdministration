@@ -1,6 +1,7 @@
 package com.kys2024.tpkysadministration.activities.activity
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,8 +15,15 @@ import com.kakao.sdk.user.UserApiClient
 import com.kys2024.tpkysadministration.R
 import com.kys2024.tpkysadministration.activities.G
 import com.kys2024.tpkysadministration.activities.data.UserAccount
+import com.kys2024.tpkysadministration.activities.network.RetrofitHelper
+import com.kys2024.tpkysadministration.activities.network.RetrofitService
 import com.kys2024.tpkysadministration.databinding.ActivitySigninMembershipBinding
+import com.navercorp.nid.NaverIdLoginSDK
+import com.navercorp.nid.oauth.OAuthLoginCallback
 import okhttp3.internal.concurrent.Task
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class Signin_MembershipActivity : AppCompatActivity() {
 
@@ -33,7 +41,7 @@ class Signin_MembershipActivity : AppCompatActivity() {
         binding.layoutEmailLogin.setOnClickListener { startActivity(Intent(this,EmailSignInActivity::class.java)) }
         binding.layoutKakaoLogin.setOnClickListener { clickKakao() }
         binding.layoutGoogleLogin.setOnClickListener { clickGoogle() }
-        //binding.layoutNaverLogin.setOnClickListener { clickNaver() }
+        binding.layoutNaverLogin.setOnClickListener { clickNaver() }
 
     }
     private fun clickKakao(){
@@ -109,56 +117,49 @@ class Signin_MembershipActivity : AppCompatActivity() {
 
         }
 
-    }
-//    private fun clickNaver(){
-//        //네아로 SDK 초기화
-//        NaverIdLoginSDK.initialize(this,"vIUJZ7U4yLjy7WvMIYej","brbGSYJ1sl","질병예측")
-//
-//        //로그인 요청
-//        NaverIdLoginSDK.authenticate(this,object : OAuthLoginCallback {
-//            override fun onError(errorCode: Int, message: String) {
-//                Toast.makeText(this@Signin_MembershipActivity, "$message", Toast.LENGTH_SHORT).show()
-//            }
-//
-//            override fun onFailure(httpStatus: Int, message: String) {
-//                Toast.makeText(this@Signin_MembershipActivity, "$message", Toast.LENGTH_SHORT).show()
-//            }
-//
-//            override fun onSuccess() {
-//                Toast.makeText(this@Signin_MembershipActivity, "로그인 성공", Toast.LENGTH_SHORT).show()
-//
-//                //사용자 정보를 받아오기 --REST API 로 받아야함
-//                //로그인에 성공하면 REST API로 요청할 수 있는 토큰(token)을 발급받음.
-//                val accessToken:String? = NaverIdLoginSDK.getAccessToken()
-//
-//                //Retrofit 작업을 통해 사용자 정보 가져오기
-//                val retrofit=RetrofitHelper.getRetrofitInstance("https://openapi.naver.com")
-//                val retrofitService=retrofit.create(RetrofitHelper::class.java)
-//                val call=retrofitService.getNidUserInfo("Bearer ${accessToken}")
-//
-//                call.enqueue(object : Callback<String> {
-//                    override fun onResponse(call: Call<String>, response: Response<String>) {
-//                        val s=response.body()
-//                        AlertDialog.Builder(this@Signin_MembershipActivity).setMessage(s).create().show()
-//
-//                        startActivity(Intent(this@Signin_MembershipActivity,MainActivity::class.java))
-//                        finish()
-//                    }
-//
-//                    override fun onFailure(call: Call<String>, t: Throwable) {
-//                        Toast.makeText(this@Signin_MembershipActivity, "${t.message}", Toast.LENGTH_SHORT).show()
-//                    }
-//
-//                })
-//
-//
-//            }
-//
-//        })
-//
-//    }
+    private fun clickNaver(){
+        //네아로 SDK 초기화
 
-//}
+        NaverIdLoginSDK.initialize(this,"vIUJZ7U4yLjy7WvMIYej","brbGSYJ1sl","질병예측")
+        NaverIdLoginSDK.authenticate(this,object : OAuthLoginCallback {
+            override fun onError(errorCode: Int, message: String) {
+                Toast.makeText(this@Signin_MembershipActivity, "$message", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onFailure(httpStatus: Int, message: String) {
+                Toast.makeText(this@Signin_MembershipActivity, "$message", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onSuccess() {
+                Toast.makeText(this@Signin_MembershipActivity, "로그인성공", Toast.LENGTH_SHORT).show()
+                val accessToken:String? = NaverIdLoginSDK.getAccessToken()
+                val retrofit = RetrofitHelper.getRetrofitInstance("https://openapi.naver.com")
+                val retrofitService = retrofit.create(RetrofitService::class.java)
+                val call = retrofitService.getNidUserInfo("Bearer ${accessToken}")
+                call.enqueue(object : Callback<String> {
+                    override fun onResponse(call: Call<String>, response: Response<String>) {
+                        val s = response.body()
+                        AlertDialog.Builder(this@Signin_MembershipActivity).setMessage(s).create().show()
+                        startActivity(Intent(this@Signin_MembershipActivity,MainActivity::class.java))
+                        finish()
+                    }
+
+                    override fun onFailure(call: Call<String>, t: Throwable) {
+                        Toast.makeText(this@Signin_MembershipActivity, "${t.message}", Toast.LENGTH_SHORT).show()
+                    }
+
+                })
+            }
+
+        })
+
+    }
+
+
+
+
+    }
+
 
 
 

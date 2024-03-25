@@ -48,7 +48,7 @@ class RecyclerAdapter(val context: Context, var item: List<Item>):Adapter<Recycl
                     holder.binding.tvDisscd.text = "질병명 : 식중독"
 
                 } else {
-                    if (items.dissCd == "4")
+                    if (items.dissCd == "5")
                         holder.binding.tvDisscd.text = "질병명 : 피부염"
                 }
             }
